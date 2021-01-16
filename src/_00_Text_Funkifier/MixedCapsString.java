@@ -6,10 +6,12 @@ public class MixedCapsString extends SpecialString{
 		super(s);
 	}
 
-	@Override
 	public String funkifyText(String s) {
-		
-		return "";
+		StringBuilder sb = new StringBuilder(s.toLowerCase());
+		for (int i = 1; i < s.length(); i += 2) {
+			sb.setCharAt(i, Character.toUpperCase(s.charAt(i)));
+		}
+		return sb.toString();
 	}
 
 }

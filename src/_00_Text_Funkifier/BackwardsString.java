@@ -6,10 +6,11 @@ public class BackwardsString extends SpecialString {
 		super(s);
 	}
 
-	@Override
 	public String funkifyText(String s) {
-		
-		return "";
+		StringBuilder sb = new StringBuilder();
+		sb.append(s);
+		sb.reverse();
+		return sb.toString();
 	}
 
 }
