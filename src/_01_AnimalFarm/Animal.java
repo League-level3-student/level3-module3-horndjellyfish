@@ -2,26 +2,41 @@ package _01_AnimalFarm;
 
 abstract class Animal {
 
-	abstract void makeNoise();
+    abstract void makeNoise();
 
-	public void eat() {
-
-	}
-
-}
-
-class Pig {
+    public void eat() {
+        System.out.println("I am eating.");
+        makeNoise();
+    }
 
 }
 
-class Cow {
-
+class Pig extends Animal {
+    @Override
+    void makeNoise() {
+    	System.out.println("Oink!");
+    }
 }
 
-class Chicken {
-
+class Cow extends Animal {
+    @Override
+    void makeNoise() {
+		System.out.println("Moo!");
+    }
 }
 
-class Goat {
+class Chicken extends Animal {
+    @Override
+    void makeNoise() {
+		System.out.println("Bok bok!");
 
+    }
 }
+
+class Goat extends Animal {
+    @Override
+    void makeNoise() {
+		System.out.println("Baaaa!");
+    }
+}
+
